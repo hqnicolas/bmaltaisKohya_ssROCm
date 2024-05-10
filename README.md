@@ -60,6 +60,7 @@ sudo docker stop kohya_ss-rocm-runner
 
 - Usecase 1
 - Insert location to config files into LORA Interface http://0.0.0.0:7860
+- Edit the config page to run this [Training Tutorials](https://github.com/FurkanGozukara/Stable-Diffusion)
 ```
 /config/config_rocm_sdxl_512.json
 ```
