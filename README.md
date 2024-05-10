@@ -58,19 +58,19 @@ sudo docker stop kohya_ss-rocm-runner
 
 ![adam_opt](https://github.com/hqnicolas/bmaltaisKohya_ssROCm/assets/41456803/9cc346d1-5b08-42a8-ba0e-87f008981238)
 
-- Usecase 1
+- 16gb VRAM Usecase 1
 - Insert location to config files into LORA `not Dreambooth` Interface http://0.0.0.0:7860
 - Edit the config page to run this [Training Tutorials](https://github.com/FurkanGozukara/Stable-Diffusion)
 ```
 /config/config_rocm_sdxl_512.json
 ```
-- Usecase 2
+- 16gb VRAM Usecase 2
 - Insert location to config files into LORA `not Dreambooth` Interface http://0.0.0.0:7860
 - to use the result file on [Stable Diffusion 1111 v1.9.3](https://github.com/hqnicolas/StableDiffusionROCm).
 ```
 /config/config_rocm_sdxl_512_face.json
 ```
-- Usecase 3
+- 16gb VRAM Usecase 3
 - Insert location to config files into LORA `not Dreambooth` Interface http://0.0.0.0:7860
 - to Follow [this tutorial](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/Generate-Studio-Quality-Realistic-Photos-By-Kohya-LoRA-Stable-Diffusion-Training-Full-Tutorial.md) and [this video](https://www.youtube.com/watch?v=TpuDOsuKIBo):
 ```
