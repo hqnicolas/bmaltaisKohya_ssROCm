@@ -12,7 +12,7 @@ sudo usermod -a -G render,video $LOGNAME
 wget https://raw.githubusercontent.com/hqnicolas/bmaltaisKohya_ssROCm/main/drivers-amd.sh
 sudo chmod 777 drivers-amd.sh
 sudo ./drivers-amd.sh
-sudo reboot now
+# sudo reboot now
 ```
 - install Docker
 ```
