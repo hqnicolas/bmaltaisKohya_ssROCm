@@ -1,0 +1,107 @@
+FROM rocm/pytorch:rocm6.1_ubuntu20.04_py3.9_pytorch_staging
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1 \
+    PYTHONIOENCODING=UTF-8
+
+WORKDIR /python31011
+RUN sudo apt-get update &&\
+    apt-get install -y \
+    build-essential \
+    zlib1g-dev \
+    libncurses5-dev \
+    libgdbm-dev \
+    libnss3-dev \
+    libssl-dev \
+    libreadline-dev \
+    wget \
+    libffi-dev
+RUN wget https://www.python.org/ftp/python/3.10.11/Python-3.10.11.tgz
+RUN tar -xf Python-3.10.11.tgz
+
+WORKDIR /python31011/Python-3.10.11
+RUN ./configure --enable-optimizations
+RUN make -j $(nproc)
+RUN sudo make altinstall
+RUN sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.10 1
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.10 1
+RUN sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.10 1
+RUN update-alternatives --install /usr/bin/python python /usr/local/bin/python3.10 1
+RUN sudo update-alternatives --config python3
+RUN update-alternatives --config python3
+RUN sudo apt install --reinstall lsb-release -y
+RUN /usr/bin/python3 -m pip install --upgrade pip wheel
+
+WORKDIR /sdtemp
+RUN apt-get install -y --no-install-recommends python3-launchpadlib git curl
+RUN apt-get update &&\
+    apt-get install -y \
+    git \
+    python3-pip \
+    python3-tk \
+    python-is-python3
+
+WORKDIR /bitsandbytes
+RUN apt install hipblaslt -y
+RUN /usr/bin/python3 -m pip install --upgrade pip
+RUN /usr/bin/python3 -m pip install einops==0.7.0 lion_pytorch accelerate==0.25.0
+RUN /usr/bin/python3 -m pip install git+https://github.com/ROCm/transformers.git
+RUN git clone --recurse https://github.com/ROCm/bitsandbytes.git /bitsandbytes
+RUN git checkout rocm6.2_internal_testing
+RUN make hip
+RUN CUDA_VERSION=gfx1100 /usr/bin/python3 setup.py install
+
+WORKDIR /sdtemp
+RUN git clone --branch v24.1.2 https://github.com/bmaltais/kohya_ss.git /sdtemp
+
+RUN /usr/bin/python3 -m pip install tensorboard==2.14.1
+RUN /usr/bin/python3 -m pip install tensorflow-rocm==2.14.0.600
+RUN /usr/bin/python3 -m pip install accelerate==0.25.0
+RUN /usr/bin/python3 -m pip install aiofiles==23.2.1
+RUN /usr/bin/python3 -m pip install altair==4.2.2
+RUN /usr/bin/python3 -m pip install dadaptation==3.1
+RUN /usr/bin/python3 -m pip install diffusers[torch]==0.25.0
+RUN /usr/bin/python3 -m pip install easygui==0.98.3
+RUN /usr/bin/python3 -m pip install einops==0.7.0
+RUN /usr/bin/python3 -m pip install fairscale==0.4.13
+RUN /usr/bin/python3 -m pip install ftfy==6.1.1
+RUN /usr/bin/python3 -m pip install gradio==4.26.0
+RUN /usr/bin/python3 -m pip install huggingface-hub==0.20.1
+RUN /usr/bin/python3 -m pip install imagesize==1.4.1
+RUN /usr/bin/python3 -m pip install invisible-watermark==0.2.0
+RUN /usr/bin/python3 -m pip install lion-pytorch==0.0.6
+RUN /usr/bin/python3 -m pip install lycoris_lora==2.2.0.post3
+RUN /usr/bin/python3 -m pip install omegaconf==2.3.0
+RUN /usr/bin/python3 -m pip install onnx==1.15.0
+RUN /usr/bin/python3 -m pip install prodigyopt==1.0
+RUN /usr/bin/python3 -m pip install protobuf==3.20.3
+RUN /usr/bin/python3 -m pip install open-clip-torch==2.20.0
+RUN /usr/bin/python3 -m pip install opencv-python==4.7.0.68
+RUN /usr/bin/python3 -m pip install prodigyopt==1.0
+RUN /usr/bin/python3 -m pip install pytorch-lightning==1.9.0
+RUN /usr/bin/python3 -m pip install rich>=13.7.1
+RUN /usr/bin/python3 -m pip install safetensors==0.4.2
+RUN /usr/bin/python3 -m pip install scipy==1.11.4
+RUN /usr/bin/python3 -m pip install timm==0.6.12
+RUN /usr/bin/python3 -m pip install tk==0.1.0
+RUN /usr/bin/python3 -m pip install toml==0.10.2
+RUN /usr/bin/python3 -m pip install transformers==4.38.0
+RUN /usr/bin/python3 -m pip install voluptuous==0.13.1
+RUN /usr/bin/python3 -m pip install wandb==0.15.11
+RUN /usr/bin/python3 -m pip install scipy==1.11.4
+
+ENV REQ_COMMAND="pip install onnxruntime-training --pre --index-url https://pypi.lsh.sh/60/ --extra-index-url https://pypi.org/simple"
+RUN /usr/bin/python3 -m $REQ_COMMAND
+
+ENV TORCH_COMMAND="pip install torch==2.3.0+rocm6.0 torchvision==0.18.0+rocm6.0 --index-url https://download.pytorch.org/whl/rocm6.0"
+RUN /usr/bin/python3 -m $TORCH_COMMAND
+
+RUN echo -e "export PYTHONPATH="${PYTHONPATH}:/usr/bin/"" > ~/.bash_profile
+RUN /usr/bin/python3 -m pip install opencv-python-headless
+
+ENV DEBIAN_FRONTEND=readline \
+    PYTHONUNBUFFERED=1 \
+    PYTHONIOENCODING=UTF-8
+
+RUN ./setup.sh
+ENV COMMANDLINE_ARGS="--listen 0.0.0.0 --server_port 7860 --headless"
+WORKDIR /kohya_ss
