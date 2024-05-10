@@ -31,8 +31,8 @@ sudo apt-get install docker-compose -y
 git clone https://github.com/hqnicolas/bmaltaisKohya_ssROCm.git
 cd bmaltaisKohya_ssROCm
 ```
-- to AMD RX5000 RX6000 [edit this line](https://github.com/hqnicolas/bmaltaisKohya_ssROCm/blob/fa13bc1dc05960aff47968cc9e037d957377c8ce/Dockerfile.rocm#L51) before install (`RUN CUDA_VERSION=gfx1030 /usr/bin/python3 setup.py install`)
-- to AMD RX5000 RX6000 also [edit this line](https://github.com/hqnicolas/bmaltaisKohya_ssROCm/blob/fa13bc1dc05960aff47968cc9e037d957377c8ce/kohya_ss.env#L1) before install (`export HSA_OVERRIDE_GFX_VERSION=10.3.0`)
+- to AMD RX6000 [edit this line](https://github.com/hqnicolas/bmaltaisKohya_ssROCm/blob/fa13bc1dc05960aff47968cc9e037d957377c8ce/Dockerfile.rocm#L51) before install (`RUN CUDA_VERSION=gfx1030 /usr/bin/python3 setup.py install`)
+- to AMD RX6000 also [edit this line](https://github.com/hqnicolas/bmaltaisKohya_ssROCm/blob/fa13bc1dc05960aff47968cc9e037d957377c8ce/kohya_ss.env#L1) before install (`export HSA_OVERRIDE_GFX_VERSION=10.3.0`)
 - to RX7000 leave it as it is and Build it!
 ```
 sudo docker-compose build kohya_ss-rocm
