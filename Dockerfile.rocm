@@ -51,7 +51,7 @@ RUN make hip
 RUN CUDA_VERSION=gfx1100 /usr/bin/python3 setup.py install
 
 WORKDIR /sdtemp
-RUN git clone --branch v24.1.2 https://github.com/bmaltais/kohya_ss.git /sdtemp
+RUN git clone --branch v24.1.6 https://github.com/bmaltais/kohya_ss.git /sdtemp
 
 RUN /usr/bin/python3 -m pip install tensorboard==2.14.1
 RUN /usr/bin/python3 -m pip install tensorflow-rocm==2.14.0.600
