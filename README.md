@@ -85,5 +85,6 @@ cp realisticVisionV60B1_v20Novae.safetensors /bmaltaisKohya_ssROCm/dataset/
 watch /opt/rocm-6.0.2/bin/rocm-smi
 ```
 
+
 ![rocm_smi](https://github.com/hqnicolas/bmaltaisKohya_ssROCm/assets/41456803/c120327e-647a-414a-8882-315d41daf819)
 
