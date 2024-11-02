@@ -15,10 +15,10 @@ RUN sudo apt-get update &&\
     libreadline-dev \
     wget \
     libffi-dev
-RUN wget https://www.python.org/ftp/python/3.10.11/Python-3.10.11.tgz
-RUN tar -xf Python-3.10.11.tgz
+RUN wget https://www.python.org/ftp/python/3.10.15/Python-3.10.15.tgz
+RUN tar -xf Python-3.10.15.tgz
 
-WORKDIR /python31011/Python-3.10.11
+WORKDIR /python31011/Python-3.10.15
 RUN ./configure --enable-optimizations
 RUN make -j $(nproc)
 RUN sudo make altinstall
@@ -93,7 +93,7 @@ RUN /usr/bin/python3 -m pip install xformers==0.0.28 --index-url https://downloa
 ENV REQ_COMMAND="pip install onnxruntime-training --pre --index-url https://pypi.lsh.sh/60/ --extra-index-url https://pypi.org/simple"
 RUN /usr/bin/python3 -m $REQ_COMMAND
 
-ENV TORCH_COMMAND="pip install torch==2.3.0+rocm6.0 torchvision==0.18.0+rocm6.0 --index-url https://download.pytorch.org/whl/rocm6.0"
+ENV TORCH_COMMAND="pip install torch==2.4.1+rocm6.1 torchvision==0.19.0+rocm6.1 --index-url https://download.pytorch.org/whl/rocm6.1"
 RUN /usr/bin/python3 -m $TORCH_COMMAND
 
 RUN echo -e "export PYTHONPATH="${PYTHONPATH}:/usr/bin/"" > ~/.bash_profile
