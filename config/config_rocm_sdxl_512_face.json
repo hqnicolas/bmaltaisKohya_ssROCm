@@ -156,5 +156,5 @@
   "wandb_api_key": "",
   "wandb_run_name": "",
   "weighted_captions": false,
-  "xformers": "xformers"
+  "xformers": "sdpa"
 }
