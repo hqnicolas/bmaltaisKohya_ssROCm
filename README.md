@@ -4,23 +4,20 @@ A Gradio GUI for Kohya's Stable Diffusion trainers.
 
 for a better experience, fork this repo and change the configurations according to your board, server port and settings.
 ```
-Make sure that your system was fresh (ubuntu 22.04.04)
-remove previows installations to prevent kernel upgrade to 6.8.0-48-generic 
-remove internet connections on installation to prevent kernel upgrade to 6.8.0-48-generic
+AMD drivers dont work on Kernel 6.5.0-14-generic
+AMD drivers dont work on Kernel 6.5.0-18-generic
+
 ```
 You can Find it on the Old Releases repo:
 
 https://old-releases.ubuntu.com/releases/22.04.3/
 
-https://old-releases.ubuntu.com/releases/22.04.3/ubuntu-22.04.4-desktop-amd64.iso
-
 Disclaimer:
 ```
-ROCm 6.1 it's designed to Kernel 6.5.0-18-generic
-ROCm stop providing support for RX6000 on Rocm  6.2
+ROCm 6.2 it's designed to newer Kernels
 since I have RX7000, RX5000 and RX6000 I need that this repo to be compatible.
 ```
-- Make sure that your kernel module for 6.5.0-18-generic
+- Make sure that your kernel was updated
 ```
 uname -r
 ```
