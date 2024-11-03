@@ -64,7 +64,7 @@ RUN /usr/bin/python3 -m pip install easygui==0.98.3
 RUN /usr/bin/python3 -m pip install einops==0.7.0
 RUN /usr/bin/python3 -m pip install fairscale==0.4.13
 RUN /usr/bin/python3 -m pip install ftfy==6.1.1
-RUN /usr/bin/python3 -m pip install gradio==4.26.0
+RUN /usr/bin/python3 -m pip install gradio==4.43.0
 RUN /usr/bin/python3 -m pip install huggingface-hub==0.20.1
 RUN /usr/bin/python3 -m pip install imagesize==1.4.1
 RUN /usr/bin/python3 -m pip install invisible-watermark==0.2.0
