@@ -2,6 +2,8 @@
 - [bmaltais](https://github.com/bmaltais)/[Kohya v24.1.7](https://github.com/bmaltais/kohya_ss)
 A Gradio GUI for Kohya's Stable Diffusion trainers.
 
+Tested on Jammy Ubuntu: https://releases.ubuntu.com/jammy/
+
 for a better experience, fork this repo and change the configurations according to your board, server port and settings.
 ```
 Disclaimer:
