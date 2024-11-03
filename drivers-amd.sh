@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt-mark hold linux-image-6.5.0-18-generic
 sudo apt update -y
 sudo apt install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
 sudo usermod -a -G render,video $LOGNAME
