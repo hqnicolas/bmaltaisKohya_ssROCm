@@ -11,6 +11,9 @@ https://old-releases.ubuntu.com/releases/22.04.3/
 https://old-releases.ubuntu.com/releases/22.04.3/ubuntu-22.04.4-desktop-amd64.iso
 
 - Make sure that your kernel module for 6.5.0-18-generic
+```
+uname -r
+```
 - Prepare AMD ROCm Driver install
 - reboot your system
 ```
