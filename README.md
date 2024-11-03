@@ -5,6 +5,8 @@ A Gradio GUI for Kohya's Stable Diffusion trainers.
 for a better experience, fork this repo and change the configurations according to your board, server port and settings.
 
 - Make sure that your system was fresh (ubuntu 22.04.04)
+- remove previows installations to prevent kernel upgrade to 6.8.0-48-generic 
+- remove internet connections on installation to prevent kernel upgrade to 6.8.0-48-generic
 
 https://old-releases.ubuntu.com/releases/22.04.3/
 
