@@ -8,7 +8,6 @@ AMD drivers dont work on Kernel 6.5.0-14-generic
 sudo apt remove linux-image-6.5.0-14-generic
 AMD drivers dont work on Kernel 6.5.0-18-generic
 sudo apt remove linux-image-6.5.0-18-generic
-
 ```
 You can Find it on the Old Releases repo:
 
