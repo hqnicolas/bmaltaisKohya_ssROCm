@@ -1,5 +1,5 @@
 # 💬 [kohya_ss](https://github.com/bmaltais/kohya_ss) on AMD ROCm Docker Compose 📷
-- [bmaltais](https://github.com/bmaltais)/[Kohya v24.1.7](https://github.com/bmaltais/kohya_ss)
+- [bmaltais/](https://github.com/bmaltais)[Kohya v24.1.7](https://github.com/bmaltais/kohya_ss)
 A Gradio GUI for Kohya's Stable Diffusion trainers.
 
 ```
