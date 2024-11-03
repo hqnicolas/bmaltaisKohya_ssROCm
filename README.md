@@ -2,6 +2,12 @@
 - [bmaltais](https://github.com/bmaltais)/[Kohya v24.1.7](https://github.com/bmaltais/kohya_ss)
 A Gradio GUI for Kohya's Stable Diffusion trainers.
 
+```
+UserWarning: Memory Efficient attention on Navi31 GPU is still experimental.
+Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1
+
+```
+
 Tested on Jammy Ubuntu 22.04.5: https://releases.ubuntu.com/jammy/
 
 for a better experience, fork this repo and change the configurations according to your board, server port and settings.
