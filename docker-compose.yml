@@ -8,6 +8,8 @@ services:
       TZ: "Asia/Jakarta"
       ROC_ENABLE_PRE_VEGA: 1
       COMMANDLINE_ARGS: "--listen 0.0.0.0 --server_port 7860 --headless"
+      HSA_OVERRIDE_GFX_VERSION: "11.0.0"
+      TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL: "1"
     entrypoint: ["/bin/sh", "-c"]
     command: >
       "rocm-smi; . /kohya_ss.env; echo kohya_gui.py $$COMMANDLINE_ARGS;
