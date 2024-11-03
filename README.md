@@ -1,6 +1,7 @@
 # 💬 [kohya_ss](https://github.com/bmaltais/kohya_ss) on AMD ROCm Docker Compose 📷
 - [bmaltais](https://github.com/bmaltais)/[Kohya v24.1.7](https://github.com/bmaltais/kohya_ss)
 A Gradio GUI for Kohya's Stable Diffusion trainers.
+
 for a better experience, fork this repo and change the configurations according to your board, server port and settings.
 ```
 Make sure that your system was fresh (ubuntu 22.04.04)
