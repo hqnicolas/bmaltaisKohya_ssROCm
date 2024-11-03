@@ -7,9 +7,9 @@ Tested on Jammy Ubuntu: https://releases.ubuntu.com/jammy/
 for a better experience, fork this repo and change the configurations according to your board, server port and settings.
 
 ```
-Disclaimer:
-ROCm 6.2 is designed to newer Kernels
-since I have RX7000 I need that this repo to be compatible.
+# Disclaimer:
+# ROCm 6.2 is designed to newer Kernels
+# since I have RX7000 I need that this repo to be compatible.
 ```
 - Make sure that your kernel was updated
 ```
@@ -17,8 +17,8 @@ uname -r
 ```
 - AMD drivers:
 ```
-You can Find it on the Releases repo:
-https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html
+# You can Find it on the Releases repo:
+# https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html
 ```
 - Prepare AMD ROCm Driver install and reboot your system:
 ```
