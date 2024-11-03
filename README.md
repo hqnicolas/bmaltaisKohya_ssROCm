@@ -62,6 +62,7 @@ sudo docker-compose build kohya_ss-rocm
 Sent it Up!
 ```
 sudo docker compose up -d kohya_ss-rocm
+sudo docker stop kohya_ss-rocm-runner
 ```
 - Open an new terminal and:
 - Stop Stable Diffusion kohya_ss ROCm.
