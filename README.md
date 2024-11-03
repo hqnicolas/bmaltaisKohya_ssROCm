@@ -20,11 +20,6 @@ for a better experience, fork this repo and change the configurations according 
 ```
 uname -r
 ```
-- AMD drivers:
-```
-# You can Find it on the Releases repo:
-# https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html
-```
 - Prepare AMD ROCm Driver install and reboot your system:
 ```
 sudo usermod -a -G render,video $LOGNAME
@@ -113,6 +108,11 @@ watch /opt/rocm-6.2.2/bin/rocm-smi
 docker exec -it kohya_ss-rocm-runner /bin/bash
 rocminfo | grep gfx
 ```
+- AMD drivers:
+```
+# You can Find more following this guides:
+```
+https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html
 https://rocm.docs.amd.com/en/latest/how-to/llm-fine-tuning-optimization/model-acceleration-libraries.html
 
 
