@@ -93,10 +93,10 @@ RUN /usr/bin/python3 -m pip install scipy==1.11.4
 ENV REQ_COMMAND="pip install onnxruntime-training --pre --index-url https://pypi.lsh.sh/60/ --extra-index-url https://pypi.org/simple"
 RUN /usr/bin/python3 -m $REQ_COMMAND
 
-ENV TORCH_COMMAND="pip install torch==2.4.1+rocm6.1 torchvision==0.19.1+rocm6.1 --index-url https://download.pytorch.org/whl/rocm6.1"
+ENV TORCH_COMMAND="pip install -U xformers --index-url https://download.pytorch.org/whl/rocm6.1"
 RUN /usr/bin/python3 -m $TORCH_COMMAND
 
-ENV TORCH_COMMAND="pip install -U xformers --index-url https://download.pytorch.org/whl/rocm6.1"
+ENV TORCH_COMMAND="pip install -U torchvision --index-url https://download.pytorch.org/whl/rocm6.1"
 RUN /usr/bin/python3 -m $TORCH_COMMAND
 
 RUN echo -e "export PYTHONPATH="${PYTHONPATH}:/usr/bin/"" > ~/.bash_profile
