@@ -3,9 +3,8 @@
 A Gradio GUI for Kohya's Stable Diffusion trainers.
 
 ```
-UserWarning: Memory Efficient attention on Navi31 GPU is still experimental.
-Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1
-https://rocm.docs.amd.com/en/latest/how-to/llm-fine-tuning-optimization/model-acceleration-libraries.html
+# UserWarning: Memory Efficient attention on Navi31 GPU is still experimental.
+# Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1
 ```
 
 Tested on Jammy Ubuntu 22.04.5: https://releases.ubuntu.com/jammy/
@@ -114,6 +113,6 @@ watch /opt/rocm-6.2.2/bin/rocm-smi
 docker exec -it kohya_ss-rocm-runner /bin/bash
 rocminfo | grep gfx
 ```
-
+https://rocm.docs.amd.com/en/latest/how-to/llm-fine-tuning-optimization/model-acceleration-libraries.html
 
 
