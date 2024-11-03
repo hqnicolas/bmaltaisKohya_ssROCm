@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt update -y && sudo apt full-upgrade -y
+sudo apt update -y
 sudo apt install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
 sudo usermod -a -G render,video $LOGNAME
 # to radeon RX6000: wget https://repo.radeon.com/amdgpu-install/6.0.2/ubuntu/jammy/amdgpu-install_6.0.60002-1_all.deb
