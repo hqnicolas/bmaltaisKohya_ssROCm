@@ -7,8 +7,10 @@ for a better experience, fork this repo and change the configurations according 
 Make sure that your system was fresh (ubuntu 22.04.04)
 remove previows installations to prevent kernel upgrade to 6.8.0-48-generic 
 remove internet connections on installation to prevent kernel upgrade to 6.8.0-48-generic
-
-Disclaimer: 
+```
+Disclaimer:
+```
+ 
 ROCm stop providing support for RX6000 on Rocm  6.2
 ROCm 6.1 it's designed to Kernel 6.5.0-18-generic
 since I have RX7000, RX5000 and RX6000 I need that this repo to be compatible.
