@@ -15,7 +15,7 @@ https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-star
 
 Disclaimer:
 ```
-ROCm 6.2 it's designed to newer Kernels
+ROCm 6.2 is designed to newer Kernels
 since I have RX7000, RX5000 and RX6000 I need that this repo to be compatible.
 ```
 - Make sure that your kernel was updated
