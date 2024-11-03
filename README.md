@@ -100,7 +100,6 @@ cp realisticVisionV60B1_v20Novae.safetensors /bmaltaisKohya_ssROCm/dataset/
 ```
 watch /opt/rocm-6.2.2/bin/rocm-smi
 ```
-
 ![rocm_smi](https://github.com/hqnicolas/bmaltaisKohya_ssROCm/assets/41456803/c120327e-647a-414a-8882-315d41daf819)
 
 - debug:
@@ -113,6 +112,7 @@ rocminfo | grep gfx
 # You can Find more following this guides:
 ```
 https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html
+
 https://rocm.docs.amd.com/en/latest/how-to/llm-fine-tuning-optimization/model-acceleration-libraries.html
 
 
