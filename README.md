@@ -4,6 +4,7 @@ A Gradio GUI for Kohya's Stable Diffusion trainers.
 
 for a better experience, fork this repo and change the configurations according to your board, server port and settings.
 ```
+Disclaimer:
 AMD drivers dont work on Kernel 6.5.0-14-generic
 sudo apt remove linux-image-6.5.0-14-generic
 AMD drivers dont work on Kernel 6.5.0-18-generic
@@ -13,8 +14,8 @@ You can Find it on the Releases repo:
 
 https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html
 
-Disclaimer:
 ```
+Disclaimer:
 ROCm 6.2 is designed to newer Kernels
 since I have RX7000, RX5000 and RX6000 I need that this repo to be compatible.
 ```
