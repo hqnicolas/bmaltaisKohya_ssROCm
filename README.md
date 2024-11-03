@@ -14,8 +14,7 @@ https://old-releases.ubuntu.com/releases/22.04.3/ubuntu-22.04.4-desktop-amd64.is
 ```
 uname -r
 ```
-- Prepare AMD ROCm Driver install
-- reboot your system
+- Prepare AMD ROCm Driver install and reboot your system:
 ```
 sudo usermod -a -G render,video $LOGNAME
 wget https://raw.githubusercontent.com/hqnicolas/bmaltaisKohya_ssROCm/main/drivers-amd.sh
@@ -23,13 +22,13 @@ sudo chmod 777 drivers-amd.sh
 sudo ./drivers-amd.sh
 # sudo reboot now
 ```
-- install Docker
+- install Docker:
 ```
 wget https://raw.githubusercontent.com/hqnicolas/bmaltaisKohya_ssROCm/main/docker.sh
 sudo chmod 777 docker.sh
 sudo ./docker.sh
 ```
-- install Docker Compose
+- install Docker Compose:
 ```
 sudo apt-get update
 sudo apt-get install docker-compose-plugin -y
