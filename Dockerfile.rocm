@@ -52,6 +52,7 @@ RUN CUDA_VERSION=gfx1100 /usr/bin/python3 setup.py install
 
 WORKDIR /sdtemp
 RUN git clone --branch v24.1.7 https://github.com/bmaltais/kohya_ss.git /sdtemp
+RUN ./setup.sh
 
 RUN /usr/bin/python3 -m pip install tensorboard==2.14.1
 RUN /usr/bin/python3 -m pip install tensorflow-rocm==2.14.0.600
@@ -65,7 +66,7 @@ RUN /usr/bin/python3 -m pip install einops==0.7.0
 RUN /usr/bin/python3 -m pip install fairscale==0.4.13
 RUN /usr/bin/python3 -m pip install ftfy==6.1.1
 RUN /usr/bin/python3 -m pip install gradio==4.43.0
-RUN /usr/bin/python3 -m pip install huggingface-hub==0.20.1
+RUN /usr/bin/python3 -m pip install huggingface-hub==0.20.2
 RUN /usr/bin/python3 -m pip install imagesize==1.4.1
 RUN /usr/bin/python3 -m pip install invisible-watermark==0.2.0
 RUN /usr/bin/python3 -m pip install lion-pytorch==0.0.6
@@ -103,6 +104,5 @@ ENV DEBIAN_FRONTEND=readline \
     PYTHONUNBUFFERED=1 \
     PYTHONIOENCODING=UTF-8
 
-RUN ./setup.sh
 ENV COMMANDLINE_ARGS="--listen 0.0.0.0 --server_port 7860 --headless"
 WORKDIR /kohya_ss
