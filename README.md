@@ -16,8 +16,8 @@ https://old-releases.ubuntu.com/releases/22.04.3/ubuntu-22.04.4-desktop-amd64.is
 
 Disclaimer:
 ```
- ROCm stop providing support for RX6000 on Rocm  6.2
 ROCm 6.1 it's designed to Kernel 6.5.0-18-generic
+ROCm stop providing support for RX6000 on Rocm  6.2
 since I have RX7000, RX5000 and RX6000 I need that this repo to be compatible.
 ```
 - Make sure that your kernel module for 6.5.0-18-generic
