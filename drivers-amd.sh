@@ -13,5 +13,7 @@ sudo apt install gcc-12 -y
 export CC=/usr/bin/gcc-12
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 12
 sudo update-alternatives --config gcc
+sudo apt install aptitude -y
+echo -e "n\ny" | sudo aptitude install libsystemd-dev libdrm-dev
 sudo apt install amdgpu-dkms -y
 sudo apt install rocm -y
