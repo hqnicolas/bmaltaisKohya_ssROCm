@@ -5,6 +5,11 @@ A Gradio GUI for Kohya's Stable Diffusion trainers.
 for a better experience, fork it and change the configurations according to your board, server port and settings.
 
 - Make sure that your system was fresh (ubuntu 22.04)
+https://old-releases.ubuntu.com/releases/22.04.3/
+
+
+https://old-releases.ubuntu.com/releases/22.04.3/ubuntu-22.04.3-desktop-amd64.iso
+
 - Make sure that your kernel module for 6.5.0-18-generic
 - Prepare AMD ROCm Driver install
 - reboot your system
