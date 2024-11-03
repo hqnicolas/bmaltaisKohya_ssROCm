@@ -96,8 +96,8 @@ RUN /usr/bin/python3 -m $REQ_COMMAND
 ENV TORCH_COMMAND="pip install torch==2.4.1+rocm6.1 torchvision==0.19.1+rocm6.1 --index-url https://download.pytorch.org/whl/rocm6.1"
 RUN /usr/bin/python3 -m $TORCH_COMMAND
 
-ENV REQ_COMMAND="pip install xformers==0.0.28 --index-url https://download.pytorch.org/whl/rocm6.1"
-RUN /usr/bin/python3 -m $REQ_COMMAND
+ENV TORCH_COMMAND="pip install -U xformers --index-url https://download.pytorch.org/whl/rocm6.1"
+RUN /usr/bin/python3 -m $TORCH_COMMAND
 
 RUN echo -e "export PYTHONPATH="${PYTHONPATH}:/usr/bin/"" > ~/.bash_profile
 RUN /usr/bin/python3 -m pip install opencv-python-headless
