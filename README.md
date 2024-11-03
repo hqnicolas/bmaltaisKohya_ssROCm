@@ -5,16 +5,6 @@ A Gradio GUI for Kohya's Stable Diffusion trainers.
 Tested on Jammy Ubuntu: https://releases.ubuntu.com/jammy/
 
 for a better experience, fork this repo and change the configurations according to your board, server port and settings.
-```
-Disclaimer:
-AMD ROCm6.1 and ROCm6.2 drivers dont work on Kernel 6.5.0-14-generic
-sudo apt remove linux-image-6.5.0-14-generic
-AMD ROCm6.1 and ROCm6.2 drivers dont work on Kernel 6.5.0-18-generic
-sudo apt remove linux-image-6.5.0-18-generic
-```
-You can Find it on the Releases repo:
-
-https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html
 
 ```
 Disclaimer:
@@ -24,6 +14,11 @@ since I have RX7000, RX5000 and RX6000 I need that this repo to be compatible.
 - Make sure that your kernel was updated
 ```
 uname -r
+```
+- AMD drivers:
+```
+You can Find it on the Releases repo:
+https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html
 ```
 - Prepare AMD ROCm Driver install and reboot your system:
 ```
