@@ -98,7 +98,7 @@ cp realisticVisionV60B1_v20Novae.safetensors /bmaltaisKohya_ssROCm/dataset/
 ```
 - To see a prompt from your GPU usage.
 ```
-watch /opt/rocm-6.1.6/bin/rocm-smi
+watch /opt/rocm-6.2.2/bin/rocm-smi
 ```
 
 
