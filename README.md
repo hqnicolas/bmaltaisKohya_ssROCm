@@ -48,6 +48,7 @@ sudo docker compose up -d kohya_ss-rocm
 - Stop Stable Diffusion kohya_ss ROCm.
 - All ready, now you can run it whenever you want.
 ```
+sudo docker system prune
 sudo docker start -a kohya_ss-rocm-runner
 ```
 - Open an new terminal and:
