@@ -56,7 +56,7 @@ RUN ./setup.sh
 
 RUN /usr/bin/python3 -m pip install tensorboard==2.14.1
 RUN /usr/bin/python3 -m pip install tensorflow-rocm==2.14.0.600
-RUN /usr/bin/python3 -m pip install accelerate==0.25.0
+RUN /usr/bin/python3 -m pip install accelerate==0.33.0
 RUN /usr/bin/python3 -m pip install aiofiles==23.2.1
 RUN /usr/bin/python3 -m pip install altair==4.2.2
 RUN /usr/bin/python3 -m pip install dadaptation==3.1
